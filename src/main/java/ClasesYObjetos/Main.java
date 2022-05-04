@@ -99,7 +99,9 @@ public class Main {
                                 dieta.reporteTxtDietas();
                             break;
                         }
-                        
+                        menu.menuAdmin();
+                        System.out.println("Ingrese una opción: ");
+                        opt = Entrada.nextInt();
                     }
                 }else if(usuarios.esAdmin(rut, password) == false && usuarios.buscarUsuario(rut)){
                     
@@ -135,6 +137,7 @@ public class Main {
                                 usuarios.actualizarUsuario(rutAActualizar);
                             break;
                         }
+                        menu.MenuUsuario();
                         System.out.println("Ingrese una opción: ");
                         op = Entrada.nextInt();
                     }

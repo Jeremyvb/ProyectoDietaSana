@@ -138,6 +138,26 @@ public class Dieta {
         }
         return false;
     }
+    
+    public void reporteTxtDietas(){
+        ArchivosTxt txt = new ArchivosTxt();
+        txt.crearArchivo("ReporteDietas.txt");
+        
+        for(int i=0; i<dieta.size(); i++){
+            txt.anexarArchivo("ReporteDietas.txt", "--------------(Dieta N°"+(i+1)+")--------------");
+            txt.anexarArchivo("ReporteDietas.txt", "--(Nombre: " + dieta.get(i).getNombre()+ ")--");
+            txt.anexarArchivo("ReporteDietas.txt", "--(Total calorias: " + dieta.get(i).getTotalCalorias()+ ")--");
+            txt.anexarArchivo("ReporteDietas.txt", "-----------Lista de alimentoss-----------");
+            for(int j=0; j<dieta.get(i).alimentos.size(); j++){
+                txt.anexarArchivo("ReporteDietas.txt","--(Alimento: "+dieta.get(i).alimentos.get(j).getNombre()+")--");
+                txt.anexarArchivo("ReporteDietas.txt","--(Tipo: "+dieta.get(i).alimentos.get(j).getTipo()+")--");
+                txt.anexarArchivo("ReporteDietas.txt","--(Calorias: "+dieta.get(i).alimentos.get(j).getCalorias()+")--");
+            }  
+            txt.anexarArchivo("ReporteDietas.txt", "-----------------------------------------");
+            txt.anexarArchivo("ReporteDietas.txt", " ");
+        }
+        System.out.println("¡Reporte de dietas creado exitosamente!");
+    }
         
        
 }
