@@ -1,0 +1,13 @@
+--------------(Usuario N°1)--------------
+--(Nombre: Jeremy)--
+--(Apellido: Villalobos)--
+--(Rut: 20.371.230-8)--
+--(Emai: jeremy.villalobos.b@gmail.com)--
+--(Contraseña: 123)--
+--(Genero: null)--
+--(Peso: 0.0)--
+--(Altura: 0.0)--
+--(Edad: 09--
+-----------Lista de ejercicios-----------
+-----------------------------------------
+ 

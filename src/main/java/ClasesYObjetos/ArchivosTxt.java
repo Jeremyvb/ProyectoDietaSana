@@ -1,43 +1,41 @@
 package ClasesYObjetos;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
+import java.io.*;
 
 public class ArchivosTxt {
     
-    File archivo;
-    
-    public void crearArchivoDeTexto(){
-    
-        
-        archivo = new File("archivo.txt");
-        if (archivo.exists()){
-            archivo.delete();
-        }
-        try{
-            if(archivo.createNewFile()){
-                System.out.println("Archivo creado con exito");
-            }else{
-                System.out.println("Error al crear archivo");
-            }
-        }catch(IOException exepcion){
-            exepcion.printStackTrace(System.out);
+    public void crearArchivo(String nombreArchivo){
+        File archivo = new File(nombreArchivo);
+        try {
+            PrintWriter salida = new PrintWriter(archivo);
+            salida.close();
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace(System.out);
         }
     }
     
-    public void escribirListaDietas(ArrayList<Dieta> dieta){
-        
-        ArrayList<Dieta> dietaClon = new ArrayList<>();
-        dietaClon = dieta;
-    
+    public void sobreEscribirArchivo(String nombreArchivo, String contenido){
+        File archivo = new File(nombreArchivo);
+        try {
+            PrintWriter salida = new PrintWriter(archivo);
+            salida.println(contenido);
+            salida.close();
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace(System.out);
+        }
     }
     
-    public void escribirListaPersonas(ArrayList<Persona> persona){
-        
-        ArrayList<Persona> personaClon = new ArrayList<>();
-        personaClon = persona;
-        
+    public void anexarArchivo(String nombreArchivo, String contenido){
+        File archivo = new File(nombreArchivo);
+        try {
+            PrintWriter salida = new PrintWriter(new FileWriter(archivo, true));
+            salida.println(contenido);
+            salida.close();
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace(System.out);
+        } catch (IOException ex) {
+            ex.printStackTrace(System.out);
+        }
     }
     
 }

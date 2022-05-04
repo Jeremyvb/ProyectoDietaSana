@@ -20,7 +20,8 @@ public class Menu {
         System.out.println("(6) Agregar alimento");
         System.out.println("(7) Imprimir alimentos");
         System.out.println("(8) Eliminar alimento");
-        System.out.println("(9) Salir");
+        System.out.println("(9) Reporte en archivo de texto de usuarios");
+        System.out.println("(10) Salir");
         System.out.println("-------------------------------------");
     }
     

@@ -88,6 +88,11 @@ public class Main {
                             alimentos.eliminarAlimento(nombreA);
                         break;
                         
+                        case 9:
+                            //Reporte txt usuarios
+                            usuarios.reporteTxtUsuarios();
+                        break;
+                        
                     }
                 }else if(usuarios.esAdmin(rut, password) == false && usuarios.buscarUsuario(rut)){
                     

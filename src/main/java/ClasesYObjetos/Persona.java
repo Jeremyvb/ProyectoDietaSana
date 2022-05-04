@@ -329,5 +329,31 @@ public class Persona {
         }
         return false;
     }
+    
+    public void reporteTxtUsuarios(){
+        ArchivosTxt txt = new ArchivosTxt();
+        txt.crearArchivo("ListaUsuarios.txt");
+        
+        for(int i=0; i<personas.size(); i++){
+            txt.anexarArchivo("ListaUsuarios.txt", "--------------(Usuario N°"+(i+1)+")--------------");
+            txt.anexarArchivo("ListaUsuarios.txt", "--(Nombre: " + personas.get(i).getNombre()+ ")--");
+            txt.anexarArchivo("ListaUsuarios.txt", "--(Apellido: " + personas.get(i).getApellido()+ ")--");
+            txt.anexarArchivo("ListaUsuarios.txt", "--(Rut: " + personas.get(i).getRut()+ ")--");
+            txt.anexarArchivo("ListaUsuarios.txt", "--(Emai: " + personas.get(i).getEmail()+ ")--");
+            txt.anexarArchivo("ListaUsuarios.txt", "--(Contraseña: " + personas.get(i).getContrasenia()+ ")--");
+            txt.anexarArchivo("ListaUsuarios.txt", "--(Genero: " + personas.get(i).getGenero()+ ")--");
+            txt.anexarArchivo("ListaUsuarios.txt", "--(Peso: " + personas.get(i).getPeso()+ ")--");
+            txt.anexarArchivo("ListaUsuarios.txt", "--(Altura: " + personas.get(i).getAltura()+ ")--");
+            txt.anexarArchivo("ListaUsuarios.txt", "--(Edad: " + personas.get(i).getEdad()+ "9--");
+            txt.anexarArchivo("ListaUsuarios.txt", "-----------Lista de ejercicios-----------");
+            for(int j=0; j<personas.get(i).LEjercicios.size(); j++){
+                txt.anexarArchivo("ListaUsuarios.txt","--(Ejercicio: "+personas.get(i).LEjercicios.get(j).getNombre()+")--");
+                txt.anexarArchivo("ListaUsuarios.txt","--(Horas: "+personas.get(i).LEjercicios.get(j).getHorasAlDia()+")--");
+            }  
+            txt.anexarArchivo("ListaUsuarios.txt", "-----------------------------------------");
+            txt.anexarArchivo("ListaUsuarios.txt", " ");
+        }
+        System.out.println("¡Reporte de usuarios creado exitosamente!");
+    }
      
 }
