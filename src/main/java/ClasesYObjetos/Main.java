@@ -38,105 +38,117 @@ public class Main {
                     System.out.println("Ingrese una opcion: ");
                     int opt = Entrada.nextInt();
                     
-                    switch(opt){
-                        case 1:
-                             //Crear usuario
-                            usuarios.insertarDatosPersona();
-                        break;
+                    while (opt != 0) {                        
+                        switch(opt){
+                            case 1:
+                                 //Crear usuario
+                                usuarios.insertarDatosPersona();
+                            break;
 
-                        case 2:
-                            //Imprimir usuarios
-                            usuarios.imprimirDatosUsuarios();
-                        break;
-                        
-                        case 3:
-                            //Actualizar usuario
-                            String rutAActualizar;
-                            System.out.println("Ingrese el rut del usuario a actualizar:");
-                            rutAActualizar = Entrada.next();
-                            usuarios.actualizarUsuario(rutAActualizar);
-                        break;
-                        
-                        case 4:
-                            //Eliminar usuario
-                            String rutAEliminar;
-                            System.out.println("Ingrese el rut del usuario a eliminar:");
-                            rutAEliminar = Entrada.next();
-                            usuarios.eliminarUsuario(rutAEliminar);
-                        break;
-                        
-                        case 5:
-                            //Imprimir usuarios
-                            dieta.imprimirDatosDieta();
-                        break;
-                        
-                        case 6:
-                            //Insertar alimento
-                            alimentos.InsertarDatos();
-                        break;
-                        
-                        case 7:
-                            //Imprimir alimentos
-                            alimentos.imprimirAlimentos();
-                        break;
-                        
-                        case 8:
-                            //Eliminar alimento
-                            String nombreA;
-                            System.out.println("Ingrese el nombre del alimento a eliminar:");
-                            nombreA = Entrada.next();
-                            alimentos.eliminarAlimento(nombreA);
-                        break;
-                        
-                        case 9:
-                            //Reporte txt usuarios
-                            usuarios.reporteTxtUsuarios();
-                        break;
+                            case 2:
+                                //Imprimir usuarios
+                                usuarios.imprimirDatosUsuarios();
+                            break;
+
+                            case 3:
+                                //Actualizar usuario
+                                String rutAActualizar;
+                                System.out.println("Ingrese el rut del usuario a actualizar:");
+                                rutAActualizar = Entrada.next();
+                                usuarios.actualizarUsuario(rutAActualizar);
+                            break;
+
+                            case 4:
+                                //Eliminar usuario
+                                String rutAEliminar;
+                                System.out.println("Ingrese el rut del usuario a eliminar:");
+                                rutAEliminar = Entrada.next();
+                                usuarios.eliminarUsuario(rutAEliminar);
+                            break;
+
+                            case 5:
+                                //Imprimir usuarios
+                                dieta.imprimirDatosDieta();
+                            break;
+
+                            case 6:
+                                //Insertar alimento
+                                alimentos.InsertarDatos();
+                            break;
+
+                            case 7:
+                                //Imprimir alimentos
+                                alimentos.imprimirAlimentos();
+                            break;
+
+                            case 8:
+                                //Eliminar alimento
+                                String nombreA;
+                                System.out.println("Ingrese el nombre del alimento a eliminar:");
+                                nombreA = Entrada.next();
+                                alimentos.eliminarAlimento(nombreA);
+                            break;
+
+                            case 9:
+                                //Reporte txt usuarios
+                                usuarios.reporteTxtUsuarios();
+                            break;
+
+                            case 10:
+                                //Reporte txt usuarios
+                                dieta.reporteTxtDietas();
+                            break;
+                        }
                         
                     }
                 }else if(usuarios.esAdmin(rut, password) == false && usuarios.buscarUsuario(rut)){
                     
                     menu.MenuUsuario();
-                    System.out.println("Ingrese una opcion: ");
+                    System.out.println("Ingrese una opción: ");
                     int op = Entrada.nextInt();
                     
-                    switch(op){
-                        case 1:
-                            //Crear dieta
-                            dieta.InsertarDatosDieta();
-                        break;
-                            
-                        case 2:
-                            //Ver lista alimentos
-                            alimentos.imprimirAlimentos();
-                        break;
-                            
-                        case 3:
-                            //Imprimir ejercicios del usuario
-                            String rutU;
-                            System.out.println("Ingrese su rut:");
-                            rutU = Entrada.next();
-                            usuarios.imprimirAlimentosUsuario(rutU);
-                        break;
-                        
-                        case 4:
-                            //Actualizar datos usuario
-                            String rutAActualizar;
-                            System.out.println("Ingrese su rut para actualizar datos:");
-                            rutAActualizar = Entrada.next();
-                            usuarios.actualizarUsuario(rutAActualizar);
-                        break;
+                    while (op != 0) {                        
+                        switch(op){
+                            case 1:
+                                //Crear dieta
+                                dieta.InsertarDatosDieta();
+                            break;
+
+                            case 2:
+                                //Ver lista alimentos
+                                alimentos.imprimirAlimentos();
+                            break;
+
+                            case 3:
+                                //Imprimir ejercicios del usuario
+                                String rutU;
+                                System.out.println("Ingrese su rut:");
+                                rutU = Entrada.next();
+                                usuarios.imprimirAlimentosUsuario(rutU);
+                            break;
+
+                            case 4:
+                                //Actualizar datos usuario
+                                String rutAActualizar;
+                                System.out.println("Ingrese su rut para actualizar datos:");
+                                rutAActualizar = Entrada.next();
+                                usuarios.actualizarUsuario(rutAActualizar);
+                            break;
+                        }
+                        System.out.println("Ingrese una opción: ");
+                        op = Entrada.nextInt();
                     }
-                    
                 }else{
                     System.out.println("¡No existe el usuario en el sistema!");
                 }
                 
             }
-            else if(option ==2)
+            else if(option == 2)
             {
                 usuarios.insertarDatosPersona();
                 
+            }else if(option == 3){
+                break;
             }
             
         } while (option != 3);  

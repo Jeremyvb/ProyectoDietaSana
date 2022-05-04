@@ -21,7 +21,8 @@ public class Menu {
         System.out.println("(7) Imprimir alimentos");
         System.out.println("(8) Eliminar alimento");
         System.out.println("(9) Reporte en archivo de texto de usuarios");
-        System.out.println("(10) Salir");
+        System.out.println("(10) Reporte en archivo de texto de dietas");
+        System.out.println("(0) Salir");
         System.out.println("-------------------------------------");
     }
     
@@ -32,7 +33,7 @@ public class Menu {
         System.out.println("(2) Consultar lista de alimentos");
         System.out.println("(3) Consultar lista de ejercicios");
         System.out.println("(4) Actualizar datos");
-        System.out.println("(5) Salir");
+        System.out.println("(0) Salir");
         System.out.println("-------------------------------------");
     }
 }
