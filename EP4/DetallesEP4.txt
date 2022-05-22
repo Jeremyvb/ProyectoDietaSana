@@ -1,0 +1,7 @@
+Detalles entrega parcial 4:
+
+EP4.1: En la clase "Persona" se encuentran las dos nuevas funcionalidades(métodos): ordenarUsuariosPorEdad y esAdmin.
+EP4.2: En la clase "Persona" se sobre-escribe el método "compareTo" y en las clases que implementan la interfaz creada igualmente se hace uso de la 
+       sobre-escritura de métodos.
+EP4.3: La clase abstracta padre es "Ejercicio", donde las clases "Caminar" y "Correr" son clases hijas.
+EP4.4: La clase "Calculadora" es una clase de tipo interfaz, donde las clases "calculosParaHombre" y "calculosParaMujer" la implementan.
