@@ -1,0 +1,15 @@
+--------------(Dieta N°1)--------------
+--(Nombre: bajar)--
+--(Total calorias: 1000.0)--
+-----------Lista de alimentoss-----------
+--(Alimento: avena)--
+--(Tipo: cereal)--
+--(Calorias: 400)--
+--(Alimento: fideos)--
+--(Tipo: masa)--
+--(Calorias: 300)--
+--(Alimento: arroz)--
+--(Tipo: cereal)--
+--(Calorias: 300)--
+-----------------------------------------
+ 
